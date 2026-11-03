@@ -1,0 +1,24 @@
+{
+ "portrait-woman": [
+  { "id": "1544005313-94ddf0286df2", "alt": "woman portrait, neutral warm background", "user": "TBD-w1" },
+  { "id": "1521119989659-a83eee488004", "alt": "woman portrait natural light", "user": "TBD-w2" },
+  { "id": "1534528741775-53994a69daeb", "alt": "woman portrait against wall", "user": "TBD-w3" },
+  { "id": "1438761681033-6461ffad8d80", "alt": "woman portrait smiling", "user": "TBD-w4" },
+  { "id": "1494790108377-be9c29b29330", "alt": "woman headshot", "user": "TBD-w5" },
+  { "id": "1573496359142-b8d87734a5a2", "alt": "professional woman portrait", "user": "TBD-w6" }
+ ],
+ "portrait-man": [
+  { "id": "1500648767791-00dcc994a43e", "alt": "bearded man portrait neutral background", "user": "TBD-m1" },
+  { "id": "1472099645785-5658abf4ff4e", "alt": "man portrait grey background", "user": "TBD-m2" },
+  { "id": "1507003211169-0a1dd7228f2d", "alt": "man portrait natural light", "user": "TBD-m3" },
+  { "id": "1492562080023-ab3db95bfbce", "alt": "man portrait dark", "user": "TBD-m4" },
+  { "id": "1519085360753-af0119f7cbe7", "alt": "man business portrait", "user": "TBD-m5" },
+  { "id": "1560250097-0b93528c311a", "alt": "man in suit portrait", "user": "TBD-m6" }
+ ],
+ "architect-portrait": [
+  { "id": "1544005313-94ddf0286df2", "alt": "woman against concrete wall", "user": "TBD-a1" },
+  { "id": "1500648767791-00dcc994a43e", "alt": "man against neutral wall", "user": "TBD-a2" },
+  { "id": "1521119989659-a83eee488004", "alt": "woman portrait", "user": "TBD-a3" },
+  { "id": "1507003211169-0a1dd7228f2d", "alt": "man portrait", "user": "TBD-a4" }
+ ]
+}

@@ -1,0 +1,558 @@
+/* ------------------------------------------------------------------
+   About. An editorial monograph chapter: split opener, an asymmetric
+   history spread, a stepped process on hairlines, a carbon philosophy
+   band with the model photograph bleeding, then the people.
+   Classes are prefixed ab- so nothing here can collide with site.css.
+   ------------------------------------------------------------------ */
+
+/* ---------- history spread ---------- */
+.ab-history__rail {
+  display: grid;
+  gap: clamp(16px, 2vw, 26px);
+  align-content: start;
+  padding-block-start: 6px;
+}
+
+.ab-history__place {
+  font-size: var(--fs-small);
+  line-height: 1.7;
+  color: var(--ink-soft);
+  letter-spacing: 0.01em;
+}
+
+.ab-history__since {
+  font-family: var(--display);
+  font-size: clamp(1.6rem, 2.5vw, 2.2rem);
+  line-height: 1;
+  color: var(--clay);
+  border-top: 1px solid var(--line);
+  padding-block-start: clamp(14px, 1.8vw, 20px);
+}
+
+.ab-history__body {
+  display: grid;
+  gap: clamp(20px, 2.6vw, 34px);
+}
+
+.ab-history__body h2 {
+  max-width: 22ch;
+}
+
+.ab-history__body .stack > div > p {
+  max-width: 60ch;
+}
+
+/* A single sentence set as a pull quote rather than another paragraph. */
+.ab-history__body .stack > .ab-history__pull {
+  font-family: var(--display);
+  font-style: italic;
+  font-size: clamp(1.25rem, 2vw, 1.7rem);
+  line-height: 1.34;
+  color: var(--ink);
+  border-inline-start: 2px solid var(--clay);
+  padding-inline-start: clamp(16px, 2.2vw, 26px);
+  max-width: 34ch;
+  margin-block-start: clamp(10px, 1.6vw, 20px);
+}
+
+/* ---------- stat ledger on hairlines ---------- */
+.ab-stats {
+  border-top: 1px solid var(--line);
+}
+
+.ab-stats__row {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.ab-stat {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: flex-start;
+  gap: 8px;
+  padding-block: clamp(20px, 2.6vw, 34px);
+}
+
+.ab-stat + .ab-stat {
+  border-inline-start: 1px solid var(--line);
+  padding-inline-start: clamp(16px, 2vw, 30px);
+}
+
+.ab-stat dd {
+  font-family: var(--display);
+  font-size: clamp(1.9rem, 3.4vw, 3.2rem);
+  font-weight: 400;
+  line-height: 1;
+  letter-spacing: -0.02em;
+  margin: 0;
+}
+
+.ab-stat dt {
+  font-size: var(--fs-label);
+  font-weight: 600;
+  letter-spacing: 0.17em;
+  text-transform: uppercase;
+  line-height: 1.45;
+  color: var(--stone);
+}
+
+/* ---------- one wide photograph cut into the page ---------- */
+.ab-strip {
+  padding-block: clamp(8px, 1.6vw, 22px) clamp(46px, 7vw, 96px);
+}
+
+.ab-strip__bleed .photo {
+  aspect-ratio: 21 / 9;
+}
+
+.ab-strip__cap {
+  color: var(--stone);
+}
+
+/* ---------- process: numbered sequence, sticky rail ---------- */
+.ab-process__rail {
+  position: sticky;
+  top: calc(var(--header-h) + 30px);
+}
+
+.ab-process__rail > div {
+  display: grid;
+  gap: clamp(16px, 2vw, 24px);
+  align-content: start;
+}
+
+.ab-process__h {
+  max-width: 18ch;
+}
+
+.ab-process__note {
+  max-width: 34ch;
+  line-height: 1.6;
+}
+
+.ab-steps {
+  margin: 0;
+  padding: 0;
+}
+
+.ab-step__inner {
+  display: grid;
+  grid-template-columns: clamp(44px, 5vw, 88px) minmax(0, 1fr);
+  gap: clamp(14px, 2.4vw, 34px);
+  align-items: baseline;
+}
+
+.ab-step__i {
+  font-family: var(--display);
+  font-size: clamp(1.5rem, 2.6vw, 2.35rem);
+  line-height: 1;
+  color: var(--stone);
+  letter-spacing: -0.01em;
+  transition: color var(--dur-fast) var(--ease);
+}
+
+.ab-step:hover .ab-step__i {
+  color: var(--clay);
+}
+
+.ab-step__text h3 {
+  font-size: clamp(1.2rem, 1.8vw, 1.62rem);
+  margin-bottom: 8px;
+}
+
+.ab-step__text p {
+  color: var(--ink-soft);
+  line-height: 1.62;
+  max-width: 62ch;
+}
+
+/* ---------- philosophy: carbon band, quotes, bleeding model ---------- */
+.ab-phil {
+  padding-block: clamp(56px, 8vw, 118px) 0;
+}
+
+.ab-phil__grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.02fr) minmax(0, 0.7fr);
+  gap: clamp(30px, 5vw, 78px);
+  align-items: stretch;
+}
+
+.ab-phil__text {
+  display: grid;
+  align-content: start;
+  gap: clamp(22px, 3vw, 38px);
+  padding-block-end: clamp(56px, 8vw, 118px);
+}
+
+.ab-phil__h {
+  max-width: 20ch;
+  color: var(--paper);
+}
+
+.ab-phil__list {
+  display: grid;
+  gap: clamp(26px, 3.4vw, 46px);
+  margin: 0;
+  padding: 0;
+}
+
+.ab-phil__item {
+  display: grid;
+  grid-template-columns: 46px minmax(0, 1fr);
+  gap: clamp(14px, 2vw, 26px);
+  align-items: start;
+  border-top: 1px solid var(--line-invert);
+  padding-block-start: clamp(20px, 2.4vw, 30px);
+}
+
+.ab-phil__i {
+  font-size: var(--fs-label);
+  font-weight: 600;
+  letter-spacing: 0.17em;
+  color: rgba(244, 240, 233, 0.45);
+  padding-block-start: 10px;
+}
+
+.ab-phil__quote {
+  font-family: var(--display);
+  font-size: clamp(1.3rem, 2.2vw, 1.95rem);
+  line-height: 1.3;
+  letter-spacing: -0.012em;
+  color: var(--paper);
+  max-width: 40ch;
+}
+
+/* The first position is the one the studio is known for: set it bigger. */
+.ab-phil__quote--lead {
+  font-size: clamp(1.6rem, 3.1vw, 2.7rem);
+  line-height: 1.22;
+  max-width: 30ch;
+}
+
+.band .ab-phil__media {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  margin-inline-end: calc(var(--gutter) * -1);
+}
+
+.band .ab-phil__media .photo {
+  flex: 1;
+  min-height: clamp(300px, 42vw, 620px);
+  aspect-ratio: auto;
+}
+
+.band .ab-phil__cap {
+  border-top: 1px solid var(--line-invert);
+  color: rgba(244, 240, 233, 0.6);
+  padding-inline-end: var(--gutter);
+  padding-block: 12px;
+  margin-top: 0;
+}
+
+.band .ab-phil__cap .label {
+  color: rgba(244, 240, 233, 0.5);
+}
+
+/* ---------- team: editorial list with generous portraits ---------- */
+.ab-team__head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: end;
+  justify-content: space-between;
+  gap: clamp(18px, 3vw, 40px);
+  border-bottom: 1px solid var(--line);
+  padding-bottom: clamp(20px, 2.6vw, 32px);
+  margin-bottom: clamp(10px, 1.4vw, 18px);
+}
+
+.ab-team__h {
+  max-width: 24ch;
+  margin-top: 12px;
+}
+
+.ab-team__count {
+  font-size: var(--fs-label);
+  font-weight: 600;
+  letter-spacing: 0.17em;
+  text-transform: uppercase;
+  color: var(--stone);
+  white-space: nowrap;
+}
+
+.ab-team__state {
+  display: grid;
+  gap: 22px;
+  padding-block: clamp(28px, 4vw, 44px);
+}
+
+.ab-team__list {
+  margin: 0;
+  padding: 0;
+}
+
+.ab-member {
+  display: grid;
+  grid-template-columns: minmax(0, 250px) minmax(0, 190px) minmax(0, 1fr);
+  gap: clamp(18px, 3vw, 46px);
+  align-items: start;
+  border-top: 1px solid var(--line);
+  padding-block: clamp(26px, 3.4vw, 48px);
+}
+
+.ab-member:last-child {
+  border-bottom: 1px solid var(--line);
+}
+
+/* The founding partner gets the wide frame; the rest get portrait crops. */
+.ab-member--lead {
+  grid-template-columns: minmax(0, 1fr) minmax(0, 190px) minmax(0, 1.1fr);
+  gap: clamp(20px, 3.4vw, 52px);
+}
+
+.ab-member__media .photo {
+  aspect-ratio: 3 / 4;
+}
+
+.ab-member--lead .ab-member__media .photo {
+  aspect-ratio: 7 / 5;
+}
+
+.ab-member__id {
+  display: grid;
+  gap: 8px;
+  align-content: start;
+}
+
+.ab-member__name {
+  font-size: clamp(1.35rem, 2.1vw, 1.85rem);
+  line-height: 1.12;
+}
+
+.ab-member--lead .ab-member__name {
+  font-size: clamp(1.6rem, 2.8vw, 2.4rem);
+}
+
+.ab-member__role {
+  line-height: 1.5;
+}
+
+.ab-member__i {
+  font-size: var(--fs-label);
+  color: var(--stone);
+  opacity: 0.6;
+  margin-block-start: 6px;
+}
+
+.ab-member__body {
+  display: grid;
+  gap: clamp(14px, 1.8vw, 20px);
+  align-content: start;
+}
+
+.ab-member__bio {
+  line-height: 1.68;
+  color: var(--ink-soft);
+  max-width: 58ch;
+}
+
+.ab-member__bio--lead {
+  font-size: var(--fs-lead);
+  line-height: 1.58;
+  color: var(--ink);
+  max-width: 46ch;
+}
+
+.ab-member__links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: clamp(14px, 2vw, 26px);
+  font-size: var(--fs-small);
+}
+
+.ab-member__mail {
+  border-bottom: 1px solid var(--line);
+  padding-bottom: 2px;
+  color: var(--stone);
+  transition: color var(--dur-fast) var(--ease), border-color var(--dur-fast) var(--ease);
+}
+
+.ab-member__mail:hover {
+  color: var(--clay-deep);
+  border-bottom-color: var(--clay);
+}
+
+/* ---------- closing spread ---------- */
+.ab-close__say {
+  display: grid;
+  gap: clamp(16px, 2.2vw, 26px);
+  align-content: start;
+}
+
+.ab-close__say h2 {
+  max-width: 22ch;
+}
+
+.ab-close__actions {
+  margin-block-start: clamp(6px, 1vw, 14px);
+}
+
+.ab-close__colophon {
+  padding-block-start: 6px;
+}
+
+.ab-close__link {
+  border-bottom: 1px solid var(--line);
+  transition: color var(--dur-fast) var(--ease), border-color var(--dur-fast) var(--ease);
+}
+
+.ab-close__link:hover {
+  color: var(--clay-deep);
+  border-bottom-color: var(--clay);
+}
+
+.ab-close__social {
+  display: flex;
+  gap: 18px;
+  flex-wrap: wrap;
+}
+
+/* ---------- shared-grid safety: the 12-col layer drops to 6 then 4 tracks,
+   and .c-12 / .from-* are not all reset there, so pin our own children. ---------- */
+@media (max-width: 1020px) {
+  .ab-history__grid > *,
+  .ab-process__grid > *,
+  .ab-close__grid > * {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (max-width: 980px) {
+  .ab-phil__grid {
+    grid-template-columns: 1fr;
+    align-items: start;
+  }
+
+  .ab-phil__text {
+    padding-block-end: clamp(30px, 5vw, 56px);
+  }
+
+  .band .ab-phil__media {
+    margin-inline-end: calc(var(--gutter) * -1);
+  }
+
+  .band .ab-phil__media .photo {
+    flex: none;
+    min-height: 0;
+    aspect-ratio: 16 / 10;
+  }
+
+  .band .ab-phil__cap {
+    padding-inline-end: var(--gutter);
+  }
+}
+
+@media (max-width: 900px) {
+  .ab-process__rail {
+    position: static;
+  }
+
+  .ab-process__rail > div {
+    gap: 14px;
+  }
+
+  .ab-member,
+  .ab-member--lead {
+    grid-template-columns: minmax(0, 168px) minmax(0, 1fr);
+    gap: clamp(18px, 3vw, 32px);
+  }
+
+  .ab-member__body {
+    grid-column: 1 / -1;
+  }
+
+  .ab-member__bio--lead {
+    font-size: var(--fs-body);
+    max-width: 60ch;
+  }
+}
+
+@media (max-width: 620px) {
+  .ab-stats__row {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .ab-stat:nth-child(2n + 1) {
+    border-inline-start: 0;
+    padding-inline-start: 0;
+  }
+
+  .ab-stat:nth-child(n + 3) {
+    border-top: 1px solid var(--line);
+  }
+
+  .ab-strip__bleed .photo {
+    aspect-ratio: 16 / 11;
+  }
+
+  .ab-step__inner {
+    grid-template-columns: 40px minmax(0, 1fr);
+    gap: 14px;
+  }
+
+  .ab-phil__item {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .ab-phil__i {
+    padding-block-start: 0;
+  }
+
+  .ab-history__pull {
+    font-size: clamp(1.2rem, 5vw, 1.5rem);
+  }
+
+  .ab-member__i {
+    display: none;
+  }
+}
+
+@media (max-width: 520px) {
+  .ab-member,
+  .ab-member--lead {
+    grid-template-columns: minmax(0, 112px) minmax(0, 1fr);
+    padding-block: 26px;
+  }
+
+  .ab-member__media .photo,
+  .ab-member--lead .ab-member__media .photo {
+    aspect-ratio: 3 / 4;
+  }
+
+  .ab-member__name {
+    font-size: 1.25rem;
+  }
+
+  .ab-stats__row {
+    grid-template-columns: 1fr;
+  }
+
+  .ab-stat {
+    padding-block: 18px;
+  }
+
+  .ab-stat:nth-child(n + 2) {
+    border-top: 1px solid var(--line);
+  }
+
+  .band .ab-phil__media .photo {
+    aspect-ratio: 4 / 3;
+  }
+
+  .ab-close__social {
+    flex-direction: column;
+    gap: 8px;
+  }
+}

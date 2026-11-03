@@ -1,0 +1,423 @@
+/* ------------------------------------------------------------------
+   Services. One article per discipline, each with its own column
+   arithmetic, image crop and type scale — never four of the same box.
+   The differences are held in custom properties on .sv-disc--n, so the
+   tablet and phone blocks can flatten the spread with ordinary
+   specificity instead of !important.
+   Prefixed sv- so nothing here can collide with the shared layer.
+   ------------------------------------------------------------------ */
+
+/* ---------- jump index, set into the opener ---------- */
+.sv-index {
+  margin-block-start: clamp(28px, 4vw, 52px);
+}
+
+.sv-index__label {
+  margin-block-end: 12px;
+}
+
+.sv-index__list {
+  margin: 0;
+  padding: 0;
+  border-top: 1px solid var(--line);
+}
+
+.sv-index__link {
+  display: grid;
+  grid-template-columns: 46px minmax(0, 1.1fr) minmax(0, 1fr) 26px;
+  align-items: baseline;
+  gap: clamp(12px, 2vw, 28px);
+  padding-block: clamp(15px, 1.9vw, 22px);
+  border-bottom: 1px solid var(--line);
+  transition: background-color var(--dur-fast) var(--ease), color var(--dur-fast) var(--ease);
+}
+
+.sv-index__link:hover {
+  background: var(--paper-deep);
+  color: var(--clay-deep);
+}
+
+.sv-index__i {
+  font-size: var(--fs-label);
+  letter-spacing: 0.14em;
+  color: var(--stone);
+}
+
+.sv-index__t {
+  font-family: var(--display);
+  font-size: clamp(1.15rem, 1.8vw, 1.55rem);
+  line-height: 1.16;
+}
+
+.sv-index__d {
+  font-size: var(--fs-small);
+  color: var(--stone);
+}
+
+.sv-index__a {
+  text-align: right;
+  opacity: 0;
+  transition: opacity var(--dur-fast) var(--ease), transform var(--dur-fast) var(--ease);
+}
+
+.sv-index__link:hover .sv-index__a,
+.sv-index__link:focus-visible .sv-index__a {
+  opacity: 1;
+  transform: translateX(3px);
+}
+
+/* ---------- the four disciplines ---------- */
+.sv-list {
+  padding-block-end: clamp(30px, 5vw, 60px);
+}
+
+.sv-disc {
+  /* Defaults; each modifier below re-cuts them. */
+  --sv-media-col: 1 / span 6;
+  --sv-body-col: 8 / span 5;
+  --sv-cols-col: 8 / -1;
+  --sv-cta-col: 1 / -1;
+  --sv-ratio: 16 / 10;
+  --sv-media-offset: 0px;
+  --sv-title-fs: clamp(1.9rem, 3.3vw, 2.9rem);
+  --sv-title-lh: 1.06;
+  --sv-title-ls: -0.02em;
+  --sv-cols-tcols: minmax(0, 1fr) minmax(0, 0.82fr);
+  --sv-scope-tcols: minmax(0, 1fr);
+
+  padding-block: clamp(50px, 7.5vw, 116px);
+  scroll-margin-top: calc(var(--header-h) + 18px);
+}
+
+.sv-disc + .sv-disc {
+  border-top: 1px solid var(--line);
+}
+
+.sv-disc__grid {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  column-gap: clamp(20px, 3vw, 46px);
+  row-gap: clamp(28px, 3.6vw, 50px);
+  align-items: start;
+}
+
+.sv-disc__media {
+  grid-column: var(--sv-media-col);
+  grid-row: 1;
+  margin-block-start: var(--sv-media-offset);
+}
+
+.sv-disc__body {
+  grid-column: var(--sv-body-col);
+  grid-row: 1;
+}
+
+.sv-disc__cols {
+  grid-column: var(--sv-cols-col);
+  grid-row: 2;
+}
+
+.sv-disc__cta {
+  grid-column: var(--sv-cta-col);
+  grid-row: 3;
+}
+
+.sv-disc__media .photo {
+  aspect-ratio: var(--sv-ratio);
+}
+
+.sv-disc__head h2 {
+  font-size: var(--sv-title-fs);
+  line-height: var(--sv-title-lh);
+  letter-spacing: var(--sv-title-ls);
+}
+
+/* 01 Architecture — the heaviest block: tall image left, wide text right,
+   the scope table tucked under the words rather than beside them. */
+.sv-disc--0 {
+  --sv-media-col: 1 / span 5;
+  --sv-body-col: 7 / span 6;
+  --sv-cols-col: 7 / -1;
+  --sv-cta-col: 7 / -1;
+  --sv-ratio: 4 / 5;
+  --sv-title-fs: clamp(2.5rem, 5.4vw, 4.4rem);
+  --sv-title-lh: 1;
+  --sv-title-ls: -0.03em;
+}
+
+/* 02 Interior Design — text left, image right, on a change of ground. */
+.sv-disc--1 {
+  --sv-media-col: 8 / -1;
+  --sv-body-col: 1 / span 6;
+  --sv-cols-col: 1 / span 6;
+  --sv-cta-col: 1 / -1;
+  --sv-ratio: 3 / 2;
+  --sv-title-fs: clamp(1.85rem, 3.1vw, 2.7rem);
+  background: var(--paper-deep);
+}
+
+/* 03 Commercial Design — a wide photograph and a narrow column of argument. */
+.sv-disc--2 {
+  --sv-media-col: 1 / span 7;
+  --sv-body-col: 9 / -1;
+  --sv-cols-col: 9 / -1;
+  --sv-cta-col: 9 / -1;
+  --sv-ratio: 16 / 10;
+  --sv-media-offset: clamp(6px, 1.4vw, 24px);
+  --sv-title-fs: clamp(1.55rem, 2.2vw, 2rem);
+  --sv-cols-tcols: minmax(0, 1fr);
+  --sv-scope-tcols: minmax(0, 1fr);
+}
+
+/* 04 Residential Renovation — the portrait crop, indented, with the scope
+   list breaking out across the full measure underneath. */
+.sv-disc--3 {
+  --sv-media-col: 2 / span 4;
+  --sv-body-col: 7 / span 6;
+  --sv-cols-col: 1 / -1;
+  --sv-cta-col: 7 / -1;
+  --sv-ratio: 3 / 4;
+  --sv-title-fs: clamp(2rem, 3.5vw, 3rem);
+  --sv-cols-tcols: minmax(0, 1.35fr) minmax(0, 1fr);
+  --sv-scope-tcols: repeat(2, minmax(0, 1fr));
+}
+
+/* ---------- block header and prose ---------- */
+.sv-disc__head {
+  display: grid;
+  grid-template-columns: clamp(46px, 5vw, 86px) minmax(0, 1fr);
+  gap: clamp(12px, 2vw, 26px);
+  align-items: start;
+  margin-block-end: clamp(20px, 2.6vw, 32px);
+}
+
+.sv-disc__i {
+  font-family: var(--display);
+  font-size: clamp(2.2rem, 4.4vw, 3.8rem);
+  line-height: 0.9;
+  color: var(--sand);
+  letter-spacing: -0.02em;
+}
+
+.sv-disc__disc {
+  margin-block-start: 10px;
+}
+
+.sv-disc__body {
+  display: grid;
+  align-content: start;
+}
+
+.sv-disc__text > * + * {
+  margin-block-start: clamp(16px, 2vw, 26px);
+}
+
+.sv-disc__text p {
+  max-width: 62ch;
+  line-height: 1.66;
+}
+
+/* ---------- scope ledger and standing notes ---------- */
+.sv-disc__cols {
+  display: grid;
+  grid-template-columns: var(--sv-cols-tcols);
+  gap: clamp(26px, 3.4vw, 50px);
+  align-items: start;
+  border-top: 1px solid var(--line);
+  padding-block-start: clamp(24px, 3vw, 38px);
+}
+
+.sv-h {
+  margin-block-end: clamp(14px, 1.6vw, 18px);
+}
+
+.sv-scope__list {
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: var(--sv-scope-tcols);
+  border-top: 1px solid var(--line-soft);
+}
+
+.sv-scope__row {
+  display: grid;
+  grid-template-columns: 30px minmax(0, 1fr);
+  gap: 12px;
+  align-items: baseline;
+  border-bottom: 1px solid var(--line-soft);
+  padding-block: 11px;
+  font-size: var(--fs-small);
+  line-height: 1.5;
+}
+
+.sv-scope__n {
+  font-size: var(--fs-label);
+  letter-spacing: 0.1em;
+  color: var(--stone);
+}
+
+.sv-notes__list {
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 12px;
+}
+
+.sv-notes__list li {
+  position: relative;
+  padding-inline-start: 22px;
+  font-size: var(--fs-small);
+  line-height: 1.6;
+  color: var(--stone);
+}
+
+.sv-notes__list li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.75em;
+  width: 12px;
+  height: 1px;
+  background: var(--clay);
+}
+
+/* ---------- per-block enquiry line ---------- */
+.sv-disc__cta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: clamp(14px, 2vw, 26px);
+  border-top: 1px solid var(--line);
+  padding-block-start: clamp(18px, 2.2vw, 26px);
+}
+
+.sv-disc__cta-note {
+  font-size: var(--fs-small);
+}
+
+.sv-cap {
+  color: var(--stone);
+  text-align: right;
+  max-width: 52ch;
+}
+
+/* ---------- tablet: the spread flattens, photograph first ---------- */
+@media (max-width: 1080px) {
+  .sv-disc__grid > .sv-disc__media,
+  .sv-disc__grid > .sv-disc__body,
+  .sv-disc__grid > .sv-disc__cols,
+  .sv-disc__grid > .sv-disc__cta {
+    grid-column: 1 / -1;
+    grid-row: auto;
+  }
+
+  .sv-disc__grid > .sv-disc__media {
+    margin-block-start: 0;
+  }
+
+  .sv-disc__media .photo {
+    aspect-ratio: 16 / 10;
+  }
+
+  .sv-disc__grid > .sv-disc__cols {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 0.82fr);
+  }
+
+  .sv-disc__grid > .sv-scope__list,
+  .sv-disc__cols > .sv-scope__list {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .sv-disc__text p {
+    max-width: 74ch;
+  }
+}
+
+@media (max-width: 860px) {
+  .sv-disc {
+    padding-block: clamp(40px, 8vw, 72px);
+  }
+
+  .sv-disc__grid > .sv-disc__cols {
+    grid-template-columns: minmax(0, 1fr);
+    gap: clamp(24px, 4vw, 36px);
+  }
+
+  .sv-disc__cols .sv-scope__list {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    column-gap: clamp(20px, 3vw, 44px);
+  }
+}
+
+/* ---------- phone ---------- */
+@media (max-width: 620px) {
+  .sv-index__link {
+    grid-template-columns: 34px minmax(0, 1fr) 22px;
+    gap: 12px;
+    padding-block: 14px;
+  }
+
+  .sv-index__d {
+    display: none;
+  }
+
+  .sv-index__t {
+    font-size: 1.2rem;
+  }
+
+  .sv-disc__head {
+    grid-template-columns: clamp(38px, 11vw, 56px) minmax(0, 1fr);
+    gap: 12px;
+  }
+
+  .sv-disc__i {
+    font-size: 2rem;
+  }
+
+  .sv-disc__media .photo {
+    aspect-ratio: 4 / 3;
+  }
+
+  .figure-cap {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+  }
+
+  .sv-cap {
+    text-align: left;
+  }
+
+  .sv-disc__grid > .sv-disc__cols {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .sv-disc__cols .sv-scope__list {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .sv-disc__cta {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+}
+
+@media (max-width: 420px) {
+  .sv-disc__text .lead {
+    font-size: 1.0625rem;
+  }
+
+  .sv-disc__head h2 {
+    font-size: clamp(1.9rem, 8.6vw, 2.6rem);
+  }
+
+  .sv-scope__row {
+    grid-template-columns: 24px minmax(0, 1fr);
+    gap: 10px;
+  }
+
+  .sv-notes__list li {
+    padding-inline-start: 18px;
+  }
+}

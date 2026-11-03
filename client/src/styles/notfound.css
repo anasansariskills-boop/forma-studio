@@ -1,0 +1,29 @@
+/* 404 — split so the mistake does not look like a template page. */
+.nf {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1fr);
+  gap: clamp(34px, 5vw, 80px);
+  align-items: center;
+  padding-block: calc(var(--header-h) + 60px) 80px;
+}
+
+.nf__code {
+  margin-block: clamp(14px, 2vw, 24px);
+}
+
+.nf__aside {
+  display: grid;
+  gap: clamp(20px, 3vw, 34px);
+}
+
+.nf__photo .photo {
+  aspect-ratio: 16 / 10;
+}
+
+@media (max-width: 900px) {
+  .nf {
+    grid-template-columns: 1fr;
+    align-items: start;
+  }
+}

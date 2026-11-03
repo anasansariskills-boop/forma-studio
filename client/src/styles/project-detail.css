@@ -1,0 +1,174 @@
+/* Individual project page. Deliberately unlike the index: an oversized title
+   block, a full-bleed opener, then a sticky facts rail beside the narrative. */
+
+.pd-head {
+  padding-block: calc(var(--header-h) + clamp(40px, 7vw, 92px)) clamp(28px, 4vw, 48px);
+  display: grid;
+  gap: clamp(20px, 3vw, 36px);
+}
+
+.pd-head__top {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 14px;
+  border-bottom: 1px solid var(--line);
+  padding-bottom: clamp(18px, 2.2vw, 26px);
+}
+
+.pd-crumb {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: var(--fs-label);
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--stone);
+}
+
+.pd-crumb a:hover {
+  color: var(--clay);
+}
+
+.pd-title {
+  max-width: 16ch;
+}
+
+.pd-sub {
+  display: flex;
+  flex-wrap: wrap;
+  gap: clamp(14px, 2vw, 28px);
+  align-items: baseline;
+  font-size: var(--fs-small);
+  color: var(--stone);
+}
+
+.pd-opener {
+  margin-inline: calc(var(--gutter) * -1);
+}
+
+.pd-opener .photo {
+  aspect-ratio: 21 / 9;
+  border-radius: 0;
+}
+
+.pd-body {
+  display: grid;
+  grid-template-columns: minmax(0, 0.62fr) minmax(0, 1fr);
+  gap: clamp(30px, 5vw, 84px);
+  align-items: start;
+  padding-block: clamp(40px, 6vw, 84px);
+}
+
+/* Facts rail stays with the reader down the narrative. */
+.pd-side {
+  position: sticky;
+  top: calc(var(--header-h) + 26px);
+  display: grid;
+  gap: clamp(22px, 3vw, 34px);
+}
+
+.pd-narrative {
+  display: grid;
+  gap: clamp(20px, 2.6vw, 32px);
+  max-width: 68ch;
+}
+
+.pd-narrative p:first-of-type {
+  font-size: var(--fs-lead);
+  line-height: 1.5;
+}
+
+.pd-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding-block-start: clamp(20px, 3vw, 34px);
+}
+
+.pd-gallery {
+  padding-block: clamp(30px, 5vw, 70px);
+  border-top: 1px solid var(--line);
+}
+
+.pd-figure {
+  display: grid;
+  gap: 10px;
+}
+
+/* Prev / next rail — arrows across the whole row, not buttons in a corner. */
+.pd-pager {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+
+.pd-pager__link {
+  display: grid;
+  gap: 8px;
+  padding-block: clamp(24px, 3.4vw, 40px);
+  transition: background-color var(--dur-fast) var(--ease), color var(--dur-fast) var(--ease);
+}
+
+.pd-pager__link:hover {
+  background: var(--paper-deep);
+  color: var(--clay-deep);
+}
+
+.pd-pager__link--next {
+  text-align: right;
+  border-left: 1px solid var(--line);
+  padding-inline-start: clamp(18px, 3vw, 40px);
+}
+
+.pd-pager__link--prev {
+  padding-inline-end: clamp(18px, 3vw, 40px);
+}
+
+.pd-pager__label {
+  font-size: var(--fs-label);
+  font-weight: 600;
+  letter-spacing: 0.17em;
+  text-transform: uppercase;
+  color: var(--stone);
+}
+
+.pd-pager__title {
+  font-family: var(--display);
+  font-size: clamp(1.3rem, 2.3vw, 1.95rem);
+  line-height: 1.14;
+}
+
+@media (max-width: 980px) {
+  .pd-body {
+    grid-template-columns: 1fr;
+  }
+
+  .pd-side {
+    position: static;
+    order: 2;
+  }
+
+  .pd-opener .photo {
+    aspect-ratio: 16 / 11;
+  }
+}
+
+@media (max-width: 560px) {
+  .pd-pager {
+    grid-template-columns: 1fr;
+  }
+
+  .pd-pager__link--next {
+    text-align: left;
+    border-left: 0;
+    border-top: 1px solid var(--line);
+    padding-inline-start: 0;
+  }
+
+  .pd-title {
+    max-width: none;
+  }
+}

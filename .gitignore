@@ -1,0 +1,15 @@
+node_modules/
+.pgdata/
+server/uploads/*
+!server/uploads/.gitkeep
+dist/
+.env
+.env.*
+!.env.example
+*.log
+*.zip
+.DS_Store
+Thumbs.db
+npm-debug.log*
+coverage/
+.qoder/

@@ -1,0 +1,39 @@
+{
+  "name": "forma-studio",
+  "version": "1.0.0",
+  "private": true,
+  "description": "FORMA Studio — premium architecture & interior design agency. React + Express + Prisma + PostgreSQL.",
+  "type": "module",
+  "workspaces": [
+    "server",
+    "client"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "db:init": "node scripts/db.mjs init",
+    "db:start": "node scripts/db.mjs start",
+    "db:stop": "node scripts/db.mjs stop",
+    "db:status": "node scripts/db.mjs status",
+    "migrate": "npm run migrate --workspace server",
+    "seed": "npm run seed --workspace server",
+    "dev:server": "npm run dev --workspace server",
+    "dev:client": "npm run dev --workspace client",
+    "build": "npm run build --workspace client",
+    "start": "npm run start --workspace server",
+    "dev": "node scripts/dev.mjs",
+    "setup": "npm run db:init && npm run migrate && npm run seed",
+    "test:api": "node scripts/smoke-test.mjs"
+  },
+  "devDependencies": {
+    "embedded-postgres": "16.15.0-beta.19"
+  },
+  "allowScripts": {
+    "@embedded-postgres/windows-x64@16.15.0-beta.19": true,
+    "@prisma/client@6.19.3": true,
+    "@prisma/engines@6.19.3": true,
+    "esbuild@0.28.2": true,
+    "prisma@6.19.3": true
+  }
+}

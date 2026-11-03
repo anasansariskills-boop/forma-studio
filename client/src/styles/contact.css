@@ -1,0 +1,433 @@
+/* ------------------------------------------------------------------
+   Contact — a working two-column enquiry layout. The form is the
+   primary column, the studio sits beside it as a quiet rail, and the
+   brief guidance runs full width under both. Nothing here edits a
+   shared sheet: every rule is `ct-` prefixed, and the few places that
+   adjust a shared class are scoped so they win on specificity.
+   ------------------------------------------------------------------ */
+
+/* ---------- opening: the three direct lines ---------- */
+.ct-lines {
+  display: flex;
+  flex-wrap: wrap;
+  gap: clamp(14px, 2vw, 30px);
+  border-top: 1px solid var(--line);
+  padding-block-start: clamp(16px, 2vw, 24px);
+}
+
+.ct-lines li {
+  display: grid;
+  gap: 4px;
+  padding-inline: clamp(14px, 1.8vw, 28px);
+  border-inline-start: 1px solid var(--line);
+  font-size: var(--fs-small);
+  min-width: 0;
+}
+
+.ct-lines li:first-child {
+  padding-inline-start: 0;
+  border-inline-start: 0;
+}
+
+.ct-lines a {
+  border-bottom: 1px solid transparent;
+  overflow-wrap: anywhere;
+  transition: color var(--dur-fast) var(--ease), border-bottom-color var(--dur-fast) var(--ease);
+}
+
+.ct-lines a:hover {
+  color: var(--clay);
+  border-bottom-color: var(--clay);
+}
+
+/* ---------- the working pair ---------- */
+.ct-work {
+  display: grid;
+  grid-template-columns: minmax(0, 1.62fr) minmax(230px, 0.46fr);
+  gap: clamp(32px, 5vw, 96px);
+  align-items: start;
+  padding-block: clamp(30px, 5vw, 68px) var(--section);
+}
+
+.ct-ask {
+  display: grid;
+  gap: clamp(18px, 2.4vw, 28px);
+  min-width: 0;
+}
+
+.ct-ask > h2 {
+  max-width: 20ch;
+}
+
+.ct-ask__note {
+  max-width: 58ch;
+  color: var(--stone);
+  font-size: var(--fs-small);
+}
+
+/* Reference carried over from a project page — set as a title-block, not a
+   banner, so it reads as a file number rather than decoration. */
+.ct-ref {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: baseline;
+  gap: 6px clamp(18px, 3vw, 34px);
+  border: 1px solid var(--line);
+  border-left: 3px solid var(--clay);
+  border-radius: 2px;
+  background: rgba(255, 255, 255, 0.42);
+  padding: clamp(14px, 1.8vw, 20px) clamp(16px, 2vw, 24px);
+}
+
+.ct-ref__label {
+  grid-column: 1 / -1;
+}
+
+.ct-ref__text {
+  font-family: var(--display);
+  font-style: italic;
+  font-size: clamp(1.12rem, 1.6vw, 1.4rem);
+  line-height: 1.32;
+  overflow-wrap: anywhere;
+}
+
+.ct-ref__actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: clamp(12px, 2vw, 24px);
+  justify-self: end;
+}
+
+.ct-ref__clear {
+  border: 0;
+  border-bottom: 1px solid var(--line);
+  border-radius: 0;
+  background: none;
+  padding: 4px 0;
+  color: var(--stone);
+  font-size: var(--fs-label);
+  font-weight: 600;
+  letter-spacing: 0.17em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: color var(--dur-fast) var(--ease), border-bottom-color var(--dur-fast) var(--ease);
+}
+
+.ct-ref__clear:hover {
+  color: var(--clay-deep);
+  border-bottom-color: var(--clay-deep);
+}
+
+/* Scoped so the shared form sheet keeps its own base rules. */
+.ct-work .form-grid {
+  gap: clamp(20px, 2.4vw, 32px);
+}
+
+.ct-work .form-status {
+  background: rgba(255, 255, 255, 0.5);
+}
+
+/* Step 01 of the process, straight from the studio profile. */
+.ct-first {
+  display: grid;
+  gap: 8px;
+  max-width: 64ch;
+  border-top: 1px solid var(--line);
+  padding-block-start: clamp(16px, 2vw, 22px);
+  font-size: var(--fs-small);
+  color: var(--stone);
+}
+
+/* ---------- quiet rail ---------- */
+.ct-rail {
+  display: grid;
+  gap: clamp(18px, 2.4vw, 26px);
+  min-width: 0;
+}
+
+.ct-rail__figure .photo {
+  aspect-ratio: 4 / 5;
+}
+
+.ct-address {
+  display: grid;
+  gap: 8px;
+  font-style: normal;
+  border-top: 1px solid var(--ink);
+  padding-block-start: 14px;
+}
+
+.ct-address__body {
+  display: grid;
+  font-family: var(--display);
+  font-size: clamp(1.06rem, 1.3vw, 1.24rem);
+  line-height: 1.42;
+}
+
+.ct-facts {
+  display: grid;
+}
+
+.ct-facts li {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 4px clamp(14px, 2vw, 22px);
+  border-top: 1px solid var(--line);
+  padding-block: 11px;
+  font-size: var(--fs-small);
+  min-width: 0;
+}
+
+.ct-facts li:last-child {
+  border-bottom: 1px solid var(--line);
+}
+
+.ct-facts a {
+  border-bottom: 1px solid transparent;
+  overflow-wrap: anywhere;
+  text-align: right;
+  transition: color var(--dur-fast) var(--ease), border-bottom-color var(--dur-fast) var(--ease);
+}
+
+.ct-facts a:hover {
+  color: var(--clay);
+  border-bottom-color: var(--clay);
+}
+
+/* ---------- schematic locator: drawn, no map tiles, no dependency ---------- */
+.ct-plan {
+  display: grid;
+  gap: 10px;
+  border-top: 1px solid var(--line);
+  padding-block-start: 14px;
+}
+
+.ct-plan__svg {
+  width: 100%;
+  height: auto;
+  color: var(--ink);
+}
+
+.ct-plan__mass rect {
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1;
+  opacity: 0.5;
+}
+
+.ct-plan__street {
+  stroke: var(--stone);
+  stroke-width: 1;
+  stroke-dasharray: 5 7;
+  fill: none;
+}
+
+.ct-plan__mark rect {
+  fill: var(--clay);
+}
+
+.ct-plan__mark path {
+  stroke: var(--clay);
+  stroke-width: 1;
+  fill: none;
+}
+
+.ct-plan__svg text {
+  font-family: var(--text);
+  font-size: 7.5px;
+  letter-spacing: 0.14em;
+  fill: var(--stone);
+  stroke: none;
+}
+
+.ct-plan__north > path {
+  stroke: var(--ink);
+  stroke-width: 1;
+  fill: none;
+}
+
+.ct-plan__north > path + path {
+  fill: var(--ink);
+}
+
+.ct-plan__north text {
+  text-anchor: middle;
+  fill: var(--ink);
+}
+
+.ct-plan__scale path {
+  stroke: var(--stone);
+  stroke-width: 1;
+  fill: none;
+}
+
+.ct-plan__ref {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3px 12px;
+  font-size: 0.78rem;
+  color: var(--stone);
+}
+
+/* ---------- what to tell us ---------- */
+.ct-guide {
+  display: grid;
+  gap: clamp(28px, 4vw, 56px);
+  padding-block: clamp(36px, 6vw, 88px) var(--section);
+}
+
+.ct-guide__head {
+  display: grid;
+  gap: clamp(12px, 1.8vw, 18px);
+}
+
+.ct-guide__head h2 {
+  max-width: 17ch;
+}
+
+.ct-guide__aside {
+  max-width: 46ch;
+  padding-inline-start: clamp(0px, 8vw, 130px);
+  font-size: var(--fs-small);
+  color: var(--stone);
+  display: grid;
+  gap: 10px;
+}
+
+.ct-brief {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: clamp(26px, 3.2vw, 48px) clamp(30px, 5vw, 88px);
+}
+
+.ct-brief__item {
+  display: grid;
+  grid-template-columns: clamp(34px, 3.2vw, 52px) minmax(0, 1fr);
+  gap: 0 clamp(10px, 1.2vw, 18px);
+  align-items: start;
+  border-top: 1px solid var(--line);
+  padding-block-start: clamp(14px, 1.6vw, 18px);
+}
+
+/* The first question opens the list and spans both columns, so six
+   requirements never flatten into a row of matching boxes. */
+.ct-brief__item:first-child {
+  grid-column: 1 / -1;
+  grid-template-columns: clamp(40px, 4vw, 64px) minmax(0, 66ch);
+}
+
+.ct-brief__i {
+  font-family: var(--display);
+  font-size: clamp(1.45rem, 2.1vw, 1.95rem);
+  line-height: 1;
+  color: var(--clay);
+}
+
+.ct-brief__item:first-child .ct-brief__i {
+  font-size: clamp(1.8rem, 2.8vw, 2.5rem);
+}
+
+.ct-brief__text {
+  display: grid;
+  gap: 8px;
+}
+
+.ct-brief__text h3 {
+  font-size: clamp(1.1rem, 1.35vw, 1.3rem);
+}
+
+.ct-brief__text p {
+  color: var(--stone);
+}
+
+/* ---------- responsive: phone layouts, not a collapsed desktop grid ---------- */
+@media (max-width: 980px) {
+  .ct-work {
+    grid-template-columns: 1fr;
+    gap: clamp(34px, 6vw, 60px);
+  }
+
+  /* The rail turns into a band of unequal columns under the form. */
+  .ct-rail {
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 230px), 1fr));
+    gap: clamp(22px, 4vw, 44px);
+    align-items: start;
+    border-top: 1px solid var(--line);
+    padding-block-start: clamp(22px, 3vw, 34px);
+  }
+
+  .ct-rail__figure .photo {
+    aspect-ratio: 3 / 2;
+  }
+
+  .ct-address {
+    border-top: 0;
+    padding-block-start: 0;
+  }
+
+  .ct-plan {
+    border-top: 0;
+    padding-block-start: 0;
+  }
+}
+
+@media (max-width: 860px) {
+  .ct-brief {
+    grid-template-columns: 1fr;
+  }
+
+  .ct-guide__aside {
+    padding-inline-start: 0;
+  }
+}
+
+@media (max-width: 620px) {
+  .ct-lines {
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  .ct-lines li {
+    padding-inline-start: 0;
+    border-inline-start: 0;
+  }
+
+  .ct-ref {
+    grid-template-columns: 1fr;
+  }
+
+  .ct-ref__actions {
+    justify-self: start;
+  }
+
+  .ct-work {
+    padding-block-end: clamp(52px, 9vw, 84px);
+  }
+
+  .ct-guide {
+    padding-block-end: clamp(56px, 9vw, 88px);
+  }
+
+  .ct-facts a {
+    text-align: left;
+  }
+}
+
+/* ---------- touch targets ---------- */
+@media (pointer: coarse), (max-width: 620px) {
+  .ct-lines a,
+  .ct-facts a,
+  .ct-ref__clear {
+    min-height: 44px;
+    display: inline-flex;
+    align-items: center;
+    padding-block: 10px;
+  }
+
+  .ct-facts li {
+    padding-block: 13px;
+  }
+}

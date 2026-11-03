@@ -1,0 +1,204 @@
+// FORMA Studio — content model.
+// Everything the public site presents, except layout chrome, is read from here.
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+enum ProjectCategory {
+  ARCHITECTURE
+  INTERIOR
+  COMMERCIAL
+  RENOVATION
+}
+
+enum ProjectStatus {
+  COMPLETED
+  IN_CONSTRUCTION
+  IN_DESIGN
+}
+
+enum InquiryStatus {
+  NEW
+  READ
+  REPLIED
+  ARCHIVED
+}
+
+model AdminUser {
+  id          String    @id @default(uuid())
+  email       String    @unique
+  passwordHash String
+  name        String
+  role        String    @default("admin")
+  lastLoginAt DateTime?
+  createdAt   DateTime  @default(now())
+  updatedAt   DateTime  @updatedAt
+
+  @@map("admin_users")
+}
+
+model Project {
+  id            String          @id @default(uuid())
+  slug          String          @unique
+  title         String
+  category      ProjectCategory
+  status        ProjectStatus   @default(COMPLETED)
+  excerpt       String
+  description   String
+  location      String
+  country       String
+  year          Int
+  areaSqm       Int?
+  client        String?
+  materials     String[]        @default([])
+  tags          String[]        @default([])
+  coverImageUrl String
+  coverImageAlt String
+  featured      Boolean         @default(false)
+  published     Boolean         @default(true)
+  sortOrder     Int             @default(0)
+  createdAt     DateTime        @default(now())
+  updatedAt     DateTime        @updatedAt
+
+  images      ProjectImage[]
+  testimonials Testimonial[]
+
+  @@index([published, sortOrder])
+  @@index([category])
+  @@index([featured])
+  @@map("projects")
+}
+
+model ProjectImage {
+  id        String  @id @default(uuid())
+  projectId String
+  url       String
+  alt       String
+  caption   String?
+  width     Int     @default(1600)
+  height    Int     @default(1000)
+  sortOrder Int     @default(0)
+
+  project Project @relation(fields: [projectId], references: [id], onDelete: Cascade)
+
+  @@index([projectId, sortOrder])
+  @@map("project_images")
+}
+
+model Service {
+  id          String   @id @default(uuid())
+  slug        String   @unique
+  title       String
+  discipline  String
+  excerpt     String
+  description String
+  scope       String[] @default([])
+  detail      String[] @default([])
+  imageUrl    String   @default("/img/services/architecture.jpg")
+  imageAlt    String   @default("FORMA Studio service")
+  sortOrder   Int      @default(0)
+  published   Boolean  @default(true)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  @@index([published, sortOrder])
+  @@map("services")
+}
+
+model Testimonial {
+  id        String   @id @default(uuid())
+  quote     String
+  author    String
+  role      String
+  company   String?
+  projectId String?
+  rating    Int      @default(5)
+  featured  Boolean  @default(false)
+  published Boolean  @default(true)
+  sortOrder Int      @default(0)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  project Project? @relation(fields: [projectId], references: [id], onDelete: SetNull)
+
+  @@index([published, sortOrder])
+  @@map("testimonials")
+}
+
+model TeamMember {
+  id        String   @id @default(uuid())
+  name      String
+  role      String
+  bio       String
+  imageUrl  String
+  imageAlt  String
+  email      String?
+  linkedin  String?
+  sortOrder Int      @default(0)
+  published Boolean  @default(true)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@index([published, sortOrder])
+  @@map("team_members")
+}
+
+/// Single-row document holding the copy and contact details that are not
+/// repeatable records: hero, philosophy, process and studio address.
+model StudioProfile {
+  id             String   @id @default("default")
+  heroKicker     String
+  heroTitle      String
+  heroLead       String
+  heroImageUrl   String   @default("/img/home/hero.jpg")
+  heroImageAlt   String   @default("FORMA Studio")
+  introKicker    String
+  introTitle     String
+  introBody      String[]
+  introImageUrl  String   @default("/img/home/intro.jpg")
+  introImageAlt  String   @default("Inside the studio")
+  philosophy     String[]
+  philosophyImageUrl String @default("/img/home/philosophy.jpg")
+  philosophyImageAlt String @default("Light and shadow detail")
+  process        Json     @default("[]")
+  stats          Json     @default("[]")
+  street         String
+  city           String
+  country        String
+  email          String
+  phone          String
+  hours          String
+  instagram      String?
+  linkedin       String?
+  foundedYear    Int
+  updatedAt      DateTime @updatedAt
+
+  @@map("studio_profile")
+}
+
+model ContactInquiry {
+  id          String        @id @default(uuid())
+  name        String
+  email       String
+  phone       String?
+  projectType String
+  budget      String?
+  timeline    String?
+  location    String?
+  message     String
+  status      InquiryStatus @default(NEW)
+  adminNote   String?
+  source      String        @default("website")
+  createdAt   DateTime      @default(now())
+  updatedAt   DateTime      @updatedAt
+
+  @@index([status, createdAt])
+  @@index([email])
+  @@map("contact_inquiries")
+}

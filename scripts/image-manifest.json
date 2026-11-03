@@ -1,0 +1,1058 @@
+[
+  {
+    "key": "home/hero",
+    "theme": "hero",
+    "unsplashId": "1676144844767-b25cb5e6c896",
+    "photographer": "hamburgphoto",
+    "photographerUrl": "https://unsplash.com/@hamburgphoto",
+    "alt": "Cantilevered board-formed concrete roof plane against a pale sky — FORMA Studio opening image",
+    "width": 1600,
+    "height": 1067,
+    "variants": [
+      "hero.jpg",
+      "hero.webp",
+      "hero-sm.jpg",
+      "hero-sm.webp"
+    ]
+  },
+  {
+    "key": "home/intro",
+    "theme": "living",
+    "unsplashId": "1762544968153-b9b47435fefd",
+    "photographer": "claybanks",
+    "photographerUrl": "https://unsplash.com/@claybanks",
+    "alt": "Living room in warm oak and tan leather under low daylight — FORMA’s approach to residential interiors",
+    "width": 1600,
+    "height": 1067,
+    "variants": [
+      "intro.jpg",
+      "intro.webp",
+      "intro-sm.jpg",
+      "intro-sm.webp"
+    ]
+  },
+  {
+    "key": "home/philosophy",
+    "theme": "stair",
+    "unsplashId": "1619307705896-1a6c0d6fda9d",
+    "photographer": "timmossholder",
+    "photographerUrl": "https://unsplash.com/@timmossholder",
+    "alt": "Raking sunlight throwing diagonal shadows across a concrete floor — light as a building material",
+    "width": 1600,
+    "height": 1067,
+    "variants": [
+      "philosophy.jpg",
+      "philosophy.webp",
+      "philosophy-sm.jpg",
+      "philosophy-sm.webp"
+    ]
+  },
+  {
+    "key": "about/atelier",
+    "theme": "office",
+    "unsplashId": "1525896544042-354764aa27e6",
+    "photographer": "jipy32",
+    "photographerUrl": "https://unsplash.com/@jipy32",
+    "alt": "FORMA’s Lisbon atelier: exposed-concrete ceiling, lounge seating and long worktables",
+    "width": 1600,
+    "height": 1600,
+    "variants": [
+      "atelier.jpg",
+      "atelier.webp",
+      "atelier-sm.jpg",
+      "atelier-sm.webp"
+    ]
+  },
+  {
+    "key": "about/workshop",
+    "theme": "model",
+    "unsplashId": "1631454965644-00510875561f",
+    "photographer": "marsumilae",
+    "photographerUrl": "https://unsplash.com/@marsumilae",
+    "alt": "Scale study model of a stepped house, cut from basswood in the workshop",
+    "width": 1600,
+    "height": 1067,
+    "variants": [
+      "workshop.jpg",
+      "workshop.webp",
+      "workshop-sm.jpg",
+      "workshop-sm.webp"
+    ]
+  },
+  {
+    "key": "about/portrait",
+    "theme": "portrait-man",
+    "unsplashId": "1472099645785-5658abf4ff4e",
+    "photographer": "Unsplash contributor (handle unverified)",
+    "photographerUrl": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e",
+    "alt": "Founding principal portrait — glasses and knit collar against a neutral studio wall",
+    "width": 1600,
+    "height": 1067,
+    "variants": [
+      "portrait.jpg",
+      "portrait.webp",
+      "portrait-sm.jpg",
+      "portrait-sm.webp"
+    ]
+  },
+  {
+    "key": "team/ana",
+    "theme": "portrait-woman",
+    "unsplashId": "1438761681033-6461ffad8d80",
+    "photographer": "Unsplash contributor (handle unverified)",
+    "photographerUrl": "https://images.unsplash.com/photo-1438761681033-6461ffad8d80",
+    "alt": "Ana Ferreira, senior architect — portrait against a soft grey backdrop",
+    "width": 800,
+    "height": 533,
+    "variants": [
+      "ana.jpg",
+      "ana.webp",
+      "ana-sm.jpg",
+      "ana-sm.webp"
+    ]
+  },
+  {
+    "key": "team/rui",
+    "theme": "portrait-man",
+    "unsplashId": "1507003211169-0a1dd7228f2d",
+    "photographer": "Unsplash contributor (handle unverified)",
+    "photographerUrl": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d",
+    "alt": "Rui Campos, project architect — arms crossed on a Lisbon rooftop at golden hour",
+    "width": 800,
+    "height": 800,
+    "variants": [
+      "rui.jpg",
+      "rui.webp",
+      "rui-sm.jpg",
+      "rui-sm.webp"
+    ]
+  },
+  {
+    "key": "team/marta",
+    "theme": "portrait-woman",
+    "unsplashId": "1544005313-94ddf0286df2",
+    "photographer": "Unsplash contributor (handle unverified)",
+    "photographerUrl": "https://images.unsplash.com/photo-1544005313-94ddf0286df2",
+    "alt": "Marta Oliveira, interiors lead — warm natural-light portrait",
+    "width": 800,
+    "height": 800,
+    "variants": [
+      "marta.jpg",
+      "marta.webp",
+      "marta-sm.jpg",
+      "marta-sm.webp"
+    ]
+  },
+  {
+    "key": "team/tomas",
+    "theme": "portrait-man",
+    "unsplashId": "1519085360753-af0119f7cbe7",
+    "photographer": "Unsplash contributor (handle unverified)",
+    "photographerUrl": "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7",
+    "alt": "Tomás Nunes, detail architect — low-key editorial portrait",
+    "width": 800,
+    "height": 800,
+    "variants": [
+      "tomas.jpg",
+      "tomas.webp",
+      "tomas-sm.jpg",
+      "tomas-sm.webp"
+    ]
+  },
+  {
+    "key": "services/architecture",
+    "theme": "villa",
+    "unsplashId": "1782890811564-9332ec0eb8be",
+    "photographer": "maverickframe",
+    "photographerUrl": "https://unsplash.com/@maverickframe",
+    "alt": "Single-storey concrete villa set in a green field — architecture service",
+    "width": 1600,
+    "height": 1600,
+    "variants": [
+      "architecture.jpg",
+      "architecture.webp",
+      "architecture-sm.jpg",
+      "architecture-sm.webp"
+    ]
+  },
+  {
+    "key": "services/interior",
+    "theme": "living",
+    "unsplashId": "1724582586529-62622e50c0b3",
+    "photographer": "prydumanodesign",
+    "photographerUrl": "https://unsplash.com/@prydumanodesign",
+    "alt": "Restrained living room in grey and oak with full-height glazing — interior service",
+    "width": 1600,
+    "height": 1000,
+    "variants": [
+      "interior.jpg",
+      "interior.webp",
+      "interior-sm.jpg",
+      "interior-sm.webp"
+    ]
+  },
+  {
+    "key": "services/commercial",
+    "theme": "hotel",
+    "unsplashId": "1621293954908-907159247fc8",
+    "photographer": "framesforyourheart",
+    "photographerUrl": "https://unsplash.com/@framesforyourheart",
+    "alt": "Warm timber-lined hospitality lobby — commercial & hospitality service",
+    "width": 1600,
+    "height": 1067,
+    "variants": [
+      "commercial.jpg",
+      "commercial.webp",
+      "commercial-sm.jpg",
+      "commercial-sm.webp"
+    ]
+  },
+  {
+    "key": "services/renovation",
+    "theme": "timber",
+    "unsplashId": "1760237655540-8197ef24838b",
+    "photographer": "dmytro_yarish",
+    "photographerUrl": "https://unsplash.com/@dmytro_yarish",
+    "alt": "Geometric timber ceiling detail — renovation & adaptation service",
+    "width": 1600,
+    "height": 1600,
+    "variants": [
+      "renovation.jpg",
+      "renovation.webp",
+      "renovation-sm.jpg",
+      "renovation-sm.webp"
+    ]
+  },
+  {
+    "key": "contact/studio",
+    "theme": "lisbon",
+    "unsplashId": "1536663815808-535e2280d2c2",
+    "photographer": "tombyrom",
+    "photographerUrl": "https://unsplash.com/@tombyrom",
+    "alt": "Lisbon rooftops and terracotta over the Tejo — the city where FORMA works",
+    "width": 1600,
+    "height": 1600,
+    "variants": [
+      "studio.jpg",
+      "studio.webp",
+      "studio-sm.jpg",
+      "studio-sm.webp"
+    ]
+  },
+  {
+    "key": "projects/casa-marnal/cover",
+    "theme": "villa",
+    "unsplashId": "1781795485048-3d98b53632db",
+    "photographer": "maverickframe",
+    "photographerUrl": "https://unsplash.com/@maverickframe",
+    "alt": "CASA MARNAL — concrete house raised on piers over a rocky hillside",
+    "width": 1600,
+    "height": 1600,
+    "variants": [
+      "cover.jpg",
+      "cover.webp",
+      "cover-sm.jpg",
+      "cover-sm.webp"
+    ]
+  },
+  {
+    "key": "projects/casa-marnal/1",
+    "theme": "villa",
+    "unsplashId": "1756706718604-ef4af3970e33",
+    "photographer": "poojanclicks",
+    "photographerUrl": "https://unsplash.com/@poojanclicks",
+    "alt": "CASA MARNAL — oak-shuttered facade in concrete and timber",
+    "width": 1600,
+    "height": 1200,
+    "variants": [
+      "1.jpg",
+      "1.webp",
+      "1-sm.jpg",
+      "1-sm.webp"
+    ]
+  },
+  {
+    "key": "projects/casa-marnal/2",
+    "theme": "hero",
+    "unsplashId": "1522743791393-522312deeebf",
+    "photographer": "heysupersimi",
+    "photographerUrl": "https://unsplash.com/@heysupersimi",
+    "alt": "CASA MARNAL — stepped concrete wall in board-marked formwork",
+    "width": 1600,
+    "height": 1600,
+    "variants": [
+      "2.jpg",
+      "2.webp",
+      "2-sm.jpg",
+      "2-sm.webp"
+    ]
+  },
+  {
+    "key": "projects/casa-marnal/3",
+    "theme": "hero",
+    "unsplashId": "1628270680011-41792b21de87",
+    "photographer": "parrish",
+    "photographerUrl": "https://unsplash.com/@parrish",
+    "alt": "CASA MARNAL — rhythmic concrete fins against the sky",
+    "width": 1600,
+    "height": 1067,
+    "variants": [
+      "3.jpg",
+      "3.webp",
+      "3-sm.jpg",
+      "3-sm.webp"
+    ]
+  },
+  {
+    "key": "projects/casa-marnal/4",
+    "theme": "stair",
+    "unsplashId": "1583769925968-19a0ccef4158",
+    "photographer": "limamauro23",
+    "photographerUrl": "https://unsplash.com/@limamauro23",
+    "alt": "CASA MARNAL — monolithic concrete stair in shadow",
+    "width": 1600,
+    "height": 1600,
+    "variants": [
+      "4.jpg",
+      "4.webp",
+      "4-sm.jpg",
+      "4-sm.webp"
+    ]
+  },
+  {
+    "key": "projects/casa-pedra-branca/cover",
+    "theme": "hero",
+    "unsplashId": "1622396481322-3b83d186701b",
+    "photographer": "kellysikkema",
+    "photographerUrl": "https://unsplash.com/@kellysikkema",
+    "alt": "CASA PEDRA BRANCA — white concrete corner under a clear sky",
+    "width": 1600,
+    "height": 1600,
+    "variants": [
+      "cover.jpg",
+      "cover.webp",
+      "cover-sm.jpg",
+      "cover-sm.webp"
+    ]
+  },
+  {
+    "key": "projects/casa-pedra-branca/1",
+    "theme": "hero",
+    "unsplashId": "1549791084-5f78368b208b",
+    "photographer": "victor_g",
+    "photographerUrl": "https://unsplash.com/@victor_g",
+    "alt": "CASA PEDRA BRANCA — glazed opening set in a smooth concrete wall",
+    "width": 1600,
+    "height": 1600,
+    "variants": [
+      "1.jpg",
+      "1.webp",
+      "1-sm.jpg",
+      "1-sm.webp"
+    ]
+  },
+  {
+    "key": "projects/casa-pedra-branca/2",
+    "theme": "facade-detail",
+    "unsplashId": "1780296262173-7df4b9f870ba",
+    "photographer": "joydeeproni",
+    "photographerUrl": "https://unsplash.com/@joydeeproni",
+    "alt": "CASA PEDRA BRANCA — grid facade of white precast panels",
+    "width": 1600,
+    "height": 1600,
+    "variants": [
+      "2.jpg",
+      "2.webp",
+      "2-sm.jpg",
+      "2-sm.webp"
+    ]
+  },
+  {
+    "key": "projects/casa-pedra-branca/3",
+    "theme": "hero",
+    "unsplashId": "1565371557106-c2abcc6fb36a",
+    "photographer": "mreizberg",
+    "photographerUrl": "https://unsplash.com/@mreizberg",
+    "alt": "CASA PEDRA BRANCA — curved concrete soffit, black-and-white study",
+    "width": 1600,
+    "height": 1600,
+    "variants": [
+      "3.jpg",
+      "3.webp",
+      "3-sm.jpg",
+      "3-sm.webp"
+    ]
+  },
+  {
+    "key": "projects/boqueiro-house/cover",
+    "theme": "villa-pool",
+    "unsplashId": "1670589953882-b94c9cb380f5",
+    "photographer": "salmansaqib",
+    "photographerUrl": "https://unsplash.com/@salmansaqib",
+    "alt": "BOQUEIRO HOUSE — low modern villa and pool at dusk",
+    "width": 1600,
+    "height": 900,
+    "variants": [
+      "cover.jpg",
+      "cover.webp",
+      "cover-sm.jpg",
+      "cover-sm.webp"
+    ]
+  },
+  {
+    "key": "projects/boqueiro-house/1",
+    "theme": "villa-pool",
+    "unsplashId": "1613490493576-7fde63acd811",
+    "photographer": "aviwerde",
+    "photographerUrl": "https://unsplash.com/@aviwerde",
+    "alt": "BOQUEIRO HOUSE — timber-soffit loggia over the pool",
+    "width": 1600,
+    "height": 1067,
+    "variants": [
+      "1.jpg",
+      "1.webp",
+      "1-sm.jpg",
+      "1-sm.webp"
+    ]
+  },
+  {
+    "key": "projects/boqueiro-house/2",
+    "theme": "villa",
+    "unsplashId": "1787088988806-7ec503692b85",
+    "photographer": "jjemanuel",
+    "photographerUrl": "https://unsplash.com/@jjemanuel",
+    "alt": "BOQUEIRO HOUSE — open-plan pavilion against a stone garden wall",
+    "width": 1600,
+    "height": 1600,
+    "variants": [
+      "2.jpg",
+      "2.webp",
+      "2-sm.jpg",
+      "2-sm.webp"
+    ]
+  },
+  {
+    "key": "projects/boqueiro-house/3",
+    "theme": "villa-pool",
+    "unsplashId": "1613977257365-aaae5a9817ff",
+    "photographer": "johnfo",
+    "photographerUrl": "https://unsplash.com/@johnfo",
+    "alt": "BOQUEIRO HOUSE — pool terrace with outdoor lounge",
+    "width": 1600,
+    "height": 1600,
+    "variants": [
+      "3.jpg",
+      "3.webp",
+      "3-sm.jpg",
+      "3-sm.webp"
+    ]
+  },
+  {
+    "key": "projects/serra-wine-house/cover",
+    "theme": "winery",
+    "unsplashId": "1762926628297-bbb137ed9968",
+    "photographer": "_shhyawnn",
+    "photographerUrl": "https://unsplash.com/@_shhyawnn",
+    "alt": "SERRA WINE HOUSE — colonnaded courtyard with climbing bougainvillea",
+    "width": 1600,
+    "height": 1067,
+    "variants": [
+      "cover.jpg",
+      "cover.webp",
+      "cover-sm.jpg",
+      "cover-sm.webp"
+    ]
+  },
+  {
+    "key": "projects/serra-wine-house/1",
+    "theme": "winery",
+    "unsplashId": "1778506800235-9db70382e278",
+    "photographer": "peter_beke",
+    "photographerUrl": "https://unsplash.com/@peter_beke",
+    "alt": "SERRA WINE HOUSE — timber walkway to an arched cellar door",
+    "width": 1600,
+    "height": 1068,
+    "variants": [
+      "1.jpg",
+      "1.webp",
+      "1-sm.jpg",
+      "1-sm.webp"
+    ]
+  },
+  {
+    "key": "projects/serra-wine-house/2",
+    "theme": "winery",
+    "unsplashId": "1767034238018-0567734f6c1d",
+    "photographer": "alexispresa",
+    "photographerUrl": "https://unsplash.com/@alexispresa",
+    "alt": "SERRA WINE HOUSE — courtyard, olive tree and wine barrels",
+    "width": 1600,
+    "height": 1600,
+    "variants": [
+      "2.jpg",
+      "2.webp",
+      "2-sm.jpg",
+      "2-sm.webp"
+    ]
+  },
+  {
+    "key": "projects/serra-wine-house/3",
+    "theme": "winery",
+    "unsplashId": "1790278136197-a411b2978d9b",
+    "photographer": "winniepix",
+    "photographerUrl": "https://unsplash.com/@winniepix",
+    "alt": "SERRA WINE HOUSE — stone winery building among the vines",
+    "width": 1600,
+    "height": 1067,
+    "variants": [
+      "3.jpg",
+      "3.webp",
+      "3-sm.jpg",
+      "3-sm.webp"
+    ]
+  },
+  {
+    "key": "projects/serra-wine-house/4",
+    "theme": "winery",
+    "unsplashId": "1767034248113-8bccfcbc4171",
+    "photographer": "alexispresa",
+    "photographerUrl": "https://unsplash.com/@alexispresa",
+    "alt": "SERRA WINE HOUSE — ochre stone facade and palms",
+    "width": 1600,
+    "height": 1600,
+    "variants": [
+      "4.jpg",
+      "4.webp",
+      "4-sm.jpg",
+      "4-sm.webp"
+    ]
+  },
+  {
+    "key": "projects/marcador-pavilion/cover",
+    "theme": "facade-detail",
+    "unsplashId": "1770629706071-3fb6210f6928",
+    "photographer": "cheesy_daniel",
+    "photographerUrl": "https://unsplash.com/@cheesy_daniel",
+    "alt": "MARCADOR PAVILION — concrete corner and brise-soleil against blue sky",
+    "width": 1600,
+    "height": 1067,
+    "variants": [
+      "cover.jpg",
+      "cover.webp",
+      "cover-sm.jpg",
+      "cover-sm.webp"
+    ]
+  },
+  {
+    "key": "projects/marcador-pavilion/1",
+    "theme": "stair",
+    "unsplashId": "1518112166137-85f9979a43aa",
+    "photographer": "lishakov",
+    "photographerUrl": "https://unsplash.com/@lishakov",
+    "alt": "MARCADOR PAVILION — aerial view of cast-concrete steps",
+    "width": 1600,
+    "height": 1600,
+    "variants": [
+      "1.jpg",
+      "1.webp",
+      "1-sm.jpg",
+      "1-sm.webp"
+    ]
+  },
+  {
+    "key": "projects/marcador-pavilion/2",
+    "theme": "facade-detail",
+    "unsplashId": "1781731339821-9d8aa0ea3308",
+    "photographer": "filipenobre",
+    "photographerUrl": "https://unsplash.com/@filipenobre",
+    "alt": "MARCADOR PAVILION — angular concrete frame, black-and-white",
+    "width": 1600,
+    "height": 1600,
+    "variants": [
+      "2.jpg",
+      "2.webp",
+      "2-sm.jpg",
+      "2-sm.webp"
+    ]
+  },
+  {
+    "key": "projects/marcador-pavilion/3",
+    "theme": "timber",
+    "unsplashId": "1582528617848-af3c559c4d71",
+    "photographer": "reddfrancisco",
+    "photographerUrl": "https://unsplash.com/@reddfrancisco",
+    "alt": "MARCADOR PAVILION — curved timber ceiling slats",
+    "width": 1600,
+    "height": 1600,
+    "variants": [
+      "3.jpg",
+      "3.webp",
+      "3-sm.jpg",
+      "3-sm.webp"
+    ]
+  },
+  {
+    "key": "projects/alfandega-workspace/cover",
+    "theme": "office",
+    "unsplashId": "1497366811353-6870744d04b2",
+    "photographer": "sunday_digital",
+    "photographerUrl": "https://unsplash.com/@sunday_digital",
+    "alt": "ALFÂNDEGA WORKSPACE — industrial loft office with steel glazing",
+    "width": 1600,
+    "height": 1068,
+    "variants": [
+      "cover.jpg",
+      "cover.webp",
+      "cover-sm.jpg",
+      "cover-sm.webp"
+    ]
+  },
+  {
+    "key": "projects/alfandega-workspace/1",
+    "theme": "office",
+    "unsplashId": "1497366216548-37526070297c",
+    "photographer": "sunday_digital",
+    "photographerUrl": "https://unsplash.com/@sunday_digital",
+    "alt": "ALFÂNDEGA WORKSPACE — dark corridor of meeting rooms",
+    "width": 1600,
+    "height": 1068,
+    "variants": [
+      "1.jpg",
+      "1.webp",
+      "1-sm.jpg",
+      "1-sm.webp"
+    ]
+  },
+  {
+    "key": "projects/alfandega-workspace/2",
+    "theme": "office",
+    "unsplashId": "1693625700727-b548ca8f5679",
+    "photographer": "perolahammar",
+    "photographerUrl": "https://unsplash.com/@perolahammar",
+    "alt": "ALFÂNDEGA WORKSPACE — boardroom with long table and black chairs",
+    "width": 1600,
+    "height": 1200,
+    "variants": [
+      "2.jpg",
+      "2.webp",
+      "2-sm.jpg",
+      "2-sm.webp"
+    ]
+  },
+  {
+    "key": "projects/alfandega-workspace/3",
+    "theme": "office",
+    "unsplashId": "1631248055158-edec7a3c072b",
+    "photographer": "mpetrucho",
+    "photographerUrl": "https://unsplash.com/@mpetrucho",
+    "alt": "ALFÂNDEGA WORKSPACE — bright break area with planting",
+    "width": 1600,
+    "height": 1078,
+    "variants": [
+      "3.jpg",
+      "3.webp",
+      "3-sm.jpg",
+      "3-sm.webp"
+    ]
+  },
+  {
+    "key": "projects/estrela-gallery/cover",
+    "theme": "gallery",
+    "unsplashId": "1518998053901-5348d3961a04",
+    "photographer": "dannie_jing",
+    "photographerUrl": "https://unsplash.com/@dannie_jing",
+    "alt": "ESTRELA GALLERY — white-hung exhibition room with framed works",
+    "width": 1600,
+    "height": 1200,
+    "variants": [
+      "cover.jpg",
+      "cover.webp",
+      "cover-sm.jpg",
+      "cover-sm.webp"
+    ]
+  },
+  {
+    "key": "projects/estrela-gallery/1",
+    "theme": "gallery",
+    "unsplashId": "1605429523419-d828acb941d9",
+    "photographer": "joshtw",
+    "photographerUrl": "https://unsplash.com/@joshtw",
+    "alt": "ESTRELA GALLERY — gallery wall of photographs under track lighting",
+    "width": 1600,
+    "height": 900,
+    "variants": [
+      "1.jpg",
+      "1.webp",
+      "1-sm.jpg",
+      "1-sm.webp"
+    ]
+  },
+  {
+    "key": "projects/estrela-gallery/2",
+    "theme": "gallery",
+    "unsplashId": "1515169273894-7e876dcf13da",
+    "photographer": "antenna",
+    "photographerUrl": "https://unsplash.com/@antenna",
+    "alt": "ESTRELA GALLERY — top-lit hall with coffered ceiling",
+    "width": 1600,
+    "height": 1067,
+    "variants": [
+      "2.jpg",
+      "2.webp",
+      "2-sm.jpg",
+      "2-sm.webp"
+    ]
+  },
+  {
+    "key": "projects/estrela-gallery/3",
+    "theme": "gallery",
+    "unsplashId": "1605999081451-4436bf1d0d88",
+    "photographer": "studiojude",
+    "photographerUrl": "https://unsplash.com/@studiojude",
+    "alt": "ESTRELA GALLERY — dark-floored gallery with visitor silhouettes",
+    "width": 1600,
+    "height": 1600,
+    "variants": [
+      "3.jpg",
+      "3.webp",
+      "3-sm.jpg",
+      "3-sm.webp"
+    ]
+  },
+  {
+    "key": "projects/baixa-flagship/cover",
+    "theme": "retail",
+    "unsplashId": "1759050486852-fdfe2fdc7bea",
+    "photographer": "johanmouchet",
+    "photographerUrl": "https://unsplash.com/@johanmouchet",
+    "alt": "BAIXA FLAGSHIP — retail interior under a curved timber canopy",
+    "width": 1600,
+    "height": 1600,
+    "variants": [
+      "cover.jpg",
+      "cover.webp",
+      "cover-sm.jpg",
+      "cover-sm.webp"
+    ]
+  },
+  {
+    "key": "projects/baixa-flagship/1",
+    "theme": "retail",
+    "unsplashId": "1553487164-47dd19cf0a72",
+    "photographer": "whiterainforest",
+    "photographerUrl": "https://unsplash.com/@whiterainforest",
+    "alt": "BAIXA FLAGSHIP — long room of timber tables and stools",
+    "width": 1600,
+    "height": 1581,
+    "variants": [
+      "1.jpg",
+      "1.webp",
+      "1-sm.jpg",
+      "1-sm.webp"
+    ]
+  },
+  {
+    "key": "projects/baixa-flagship/2",
+    "theme": "retail",
+    "unsplashId": "1791064543809-5bde33c40e34",
+    "photographer": "___atmos",
+    "photographerUrl": "https://unsplash.com/@___atmos",
+    "alt": "BAIXA FLAGSHIP — garment display against a textured lime wall",
+    "width": 1600,
+    "height": 1600,
+    "variants": [
+      "2.jpg",
+      "2.webp",
+      "2-sm.jpg",
+      "2-sm.webp"
+    ]
+  },
+  {
+    "key": "projects/baixa-flagship/3",
+    "theme": "retail",
+    "unsplashId": "1781967651630-e680c7bad016",
+    "photographer": "declansun",
+    "photographerUrl": "https://unsplash.com/@declansun",
+    "alt": "BAIXA FLAGSHIP — concrete arch and glass partition at the fitting area",
+    "width": 1600,
+    "height": 1600,
+    "variants": [
+      "3.jpg",
+      "3.webp",
+      "3-sm.jpg",
+      "3-sm.webp"
+    ]
+  },
+  {
+    "key": "projects/hotel-aurora/cover",
+    "theme": "hotel",
+    "unsplashId": "1660557989695-14fac79c086d",
+    "photographer": "dylancalluy",
+    "photographerUrl": "https://unsplash.com/@dylancalluy",
+    "alt": "HOTEL AURORA — black-marble reception desk with brass reveal",
+    "width": 1600,
+    "height": 1600,
+    "variants": [
+      "cover.jpg",
+      "cover.webp",
+      "cover-sm.jpg",
+      "cover-sm.webp"
+    ]
+  },
+  {
+    "key": "projects/hotel-aurora/1",
+    "theme": "hotel",
+    "unsplashId": "1660557989725-f511e9fa6267",
+    "photographer": "dylancalluy",
+    "photographerUrl": "https://unsplash.com/@dylancalluy",
+    "alt": "HOTEL AURORA — lounge with curved sofa and amber cushions",
+    "width": 1600,
+    "height": 1600,
+    "variants": [
+      "1.jpg",
+      "1.webp",
+      "1-sm.jpg",
+      "1-sm.webp"
+    ]
+  },
+  {
+    "key": "projects/hotel-aurora/2",
+    "theme": "bathroom",
+    "unsplashId": "1781795035627-fa93f2863bba",
+    "photographer": "maverickframe",
+    "photographerUrl": "https://unsplash.com/@maverickframe",
+    "alt": "HOTEL AURORA — copper bathtub set in a stone-vaulted bathroom",
+    "width": 1600,
+    "height": 1600,
+    "variants": [
+      "2.jpg",
+      "2.webp",
+      "2-sm.jpg",
+      "2-sm.webp"
+    ]
+  },
+  {
+    "key": "projects/hotel-aurora/3",
+    "theme": "bedroom",
+    "unsplashId": "1779903726446-6f796d533d47",
+    "photographer": "___atmos",
+    "photographerUrl": "https://unsplash.com/@___atmos",
+    "alt": "HOTEL AURORA — guest room in beige linen with floating nightstand",
+    "width": 1600,
+    "height": 1600,
+    "variants": [
+      "3.jpg",
+      "3.webp",
+      "3-sm.jpg",
+      "3-sm.webp"
+    ]
+  },
+  {
+    "key": "projects/hotel-aurora/4",
+    "theme": "restaurant",
+    "unsplashId": "1636405189493-181ecf851006",
+    "photographer": "jelezniac_bianca",
+    "photographerUrl": "https://unsplash.com/@jelezniac_bianca",
+    "alt": "HOTEL AURORA — restaurant with a mature tree beneath rattan domes",
+    "width": 1600,
+    "height": 1600,
+    "variants": [
+      "4.jpg",
+      "4.webp",
+      "4-sm.jpg",
+      "4-sm.webp"
+    ]
+  },
+  {
+    "key": "projects/casa-vento-sul/cover",
+    "theme": "living",
+    "unsplashId": "1609081144289-eacc3108cd03",
+    "photographer": "jakobowens1",
+    "photographerUrl": "https://unsplash.com/@jakobowens1",
+    "alt": "CASA VENTO SUL — living room in white plaster and walnut chairs",
+    "width": 1600,
+    "height": 1600,
+    "variants": [
+      "cover.jpg",
+      "cover.webp",
+      "cover-sm.jpg",
+      "cover-sm.webp"
+    ]
+  },
+  {
+    "key": "projects/casa-vento-sul/1",
+    "theme": "bedroom",
+    "unsplashId": "1601276174812-63280a55656e",
+    "photographer": "lvphotos",
+    "photographerUrl": "https://unsplash.com/@lvphotos",
+    "alt": "CASA VENTO SUL — bedroom with blind-shadow across white linen",
+    "width": 1600,
+    "height": 1600,
+    "variants": [
+      "1.jpg",
+      "1.webp",
+      "1-sm.jpg",
+      "1-sm.webp"
+    ]
+  },
+  {
+    "key": "projects/casa-vento-sul/2",
+    "theme": "kitchen",
+    "unsplashId": "1758565811352-a439bd6f956e",
+    "photographer": "___atmos",
+    "photographerUrl": "https://unsplash.com/@___atmos",
+    "alt": "CASA VENTO SUL — oak-and-marble kitchen island under a concrete ceiling",
+    "width": 1600,
+    "height": 1600,
+    "variants": [
+      "2.jpg",
+      "2.webp",
+      "2-sm.jpg",
+      "2-sm.webp"
+    ]
+  },
+  {
+    "key": "projects/casa-vento-sul/3",
+    "theme": "bathroom",
+    "unsplashId": "1763485956052-33cc16e7f29e",
+    "photographer": "petepxl",
+    "photographerUrl": "https://unsplash.com/@petepxl",
+    "alt": "CASA VENTO SUL — travertine bathroom with floating vanity",
+    "width": 1600,
+    "height": 1600,
+    "variants": [
+      "3.jpg",
+      "3.webp",
+      "3-sm.jpg",
+      "3-sm.webp"
+    ]
+  },
+  {
+    "key": "projects/principe-atelier/cover",
+    "theme": "desk",
+    "unsplashId": "1782290547018-8bb89b8edf07",
+    "photographer": "brechtcorbeel",
+    "photographerUrl": "https://unsplash.com/@brechtcorbeel",
+    "alt": "PRÍNCIPE ATELIER — drafting table on timber sawhorses with acrylic stool",
+    "width": 1600,
+    "height": 768,
+    "variants": [
+      "cover.jpg",
+      "cover.webp",
+      "cover-sm.jpg",
+      "cover-sm.webp"
+    ]
+  },
+  {
+    "key": "projects/principe-atelier/1",
+    "theme": "study",
+    "unsplashId": "1533327325824-76bc4e62d560",
+    "photographer": "claybanks",
+    "photographerUrl": "https://unsplash.com/@claybanks",
+    "alt": "PRÍNCIPE ATELIER — mezzanine library of the renovated studio",
+    "width": 1600,
+    "height": 1068,
+    "variants": [
+      "1.jpg",
+      "1.webp",
+      "1-sm.jpg",
+      "1-sm.webp"
+    ]
+  },
+  {
+    "key": "projects/principe-atelier/2",
+    "theme": "model",
+    "unsplashId": "1742198526562-5663a82c13b6",
+    "photographer": "antoine_gravphotos",
+    "photographerUrl": "https://unsplash.com/@antoine_gravphotos",
+    "alt": "PRÍNCIPE ATELIER — massing models in pale wood on the workbench",
+    "width": 1600,
+    "height": 1600,
+    "variants": [
+      "2.jpg",
+      "2.webp",
+      "2-sm.jpg",
+      "2-sm.webp"
+    ]
+  },
+  {
+    "key": "projects/casa-sobreiro/cover",
+    "theme": "bedroom",
+    "unsplashId": "1552558636-f6a8f071c2b3",
+    "photographer": "enka80",
+    "photographerUrl": "https://unsplash.com/@enka80",
+    "alt": "CASA SOBREIRO — bedroom in limewashed walls with dried branches",
+    "width": 1600,
+    "height": 1600,
+    "variants": [
+      "cover.jpg",
+      "cover.webp",
+      "cover-sm.jpg",
+      "cover-sm.webp"
+    ]
+  },
+  {
+    "key": "projects/casa-sobreiro/1",
+    "theme": "kitchen",
+    "unsplashId": "1738748444653-2fb1388aef1a",
+    "photographer": "alexeyaladashvili61",
+    "photographerUrl": "https://unsplash.com/@alexeyaladashvili61",
+    "alt": "CASA SOBREIRO — green-marble kitchen island with oak stools",
+    "width": 1600,
+    "height": 1600,
+    "variants": [
+      "1.jpg",
+      "1.webp",
+      "1-sm.jpg",
+      "1-sm.webp"
+    ]
+  },
+  {
+    "key": "projects/casa-sobreiro/2",
+    "theme": "living",
+    "unsplashId": "1631510390389-c1e4fb20ff31",
+    "photographer": "spacejoy",
+    "photographerUrl": "https://unsplash.com/@spacejoy",
+    "alt": "CASA SOBREIRO — sunlit sitting room with potted fig",
+    "width": 1600,
+    "height": 1172,
+    "variants": [
+      "2.jpg",
+      "2.webp",
+      "2-sm.jpg",
+      "2-sm.webp"
+    ]
+  },
+  {
+    "key": "projects/principe-atelier/3",
+    "theme": "desk",
+    "unsplashId": "1782292932568-149f950c4d0d",
+    "photographer": "brechtcorbeel",
+    "photographerUrl": "https://unsplash.com/@brechtcorbeel",
+    "alt": "PRÍNCIPE ATELIER — drafting table with a yellow task lamp",
+    "width": 1600,
+    "height": 1600,
+    "variants": [
+      "3.jpg",
+      "3.webp",
+      "3-sm.jpg",
+      "3-sm.webp"
+    ]
+  },
+  {
+    "key": "projects/casa-sobreiro/3",
+    "theme": "bathroom",
+    "unsplashId": "1763978485095-1cd13f4d3cb3",
+    "photographer": "poojanclicks",
+    "photographerUrl": "https://unsplash.com/@poojanclicks",
+    "alt": "CASA SOBREIRO — stone-basin bathroom with woven pendant lights",
+    "width": 1600,
+    "height": 1065,
+    "variants": [
+      "3.jpg",
+      "3.webp",
+      "3-sm.jpg",
+      "3-sm.webp"
+    ]
+  }
+]

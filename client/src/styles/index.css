@@ -1,0 +1,8 @@
+/* Single entry for the shared design system.
+   Page-specific styles live in their own file and are imported by the page
+   component, so the public site never ships admin CSS and no two pages edit
+   the same stylesheet. */
+@import './base.css';
+@import './layout.css';
+@import './hero.css';
+@import './site.css';

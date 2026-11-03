@@ -1,0 +1,193 @@
+/* ------------------------------------------------------------------
+   Structural layer: page shells, the 12-column asymmetric grid,
+   hairline rules and section rhythm.
+   ------------------------------------------------------------------ */
+
+.shell {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.shell > main {
+  flex: 1;
+}
+
+.wrap {
+  width: 100%;
+  max-width: var(--max);
+  margin-inline: auto;
+  padding-inline: var(--gutter);
+}
+
+.wrap--narrow {
+  max-width: 1140px;
+}
+
+.wrap--flush {
+  padding-inline: 0;
+}
+
+.section {
+  padding-block: var(--section);
+}
+
+.section--tight {
+  padding-block: clamp(52px, 7vh, 96px);
+}
+
+.section--start {
+  padding-block-start: clamp(46px, 7vh, 92px);
+}
+
+.band {
+  background: var(--carbon);
+  color: var(--paper);
+}
+
+.band h1,
+.band h2,
+.band h3 {
+  color: var(--paper);
+}
+
+.rule {
+  border: 0;
+  border-top: 1px solid var(--line);
+  margin: 0;
+}
+
+.rule--invert {
+  border-top-color: var(--line-invert);
+}
+
+/* The grid: twelve columns, but content almost never fills them evenly. */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  column-gap: clamp(20px, 3vw, 46px);
+  row-gap: clamp(28px, 4vw, 56px);
+  align-items: start;
+}
+
+.grid--loose {
+  row-gap: clamp(40px, 6vw, 84px);
+}
+
+.c-3 { grid-column: span 3; }
+.c-4 { grid-column: span 4; }
+.c-5 { grid-column: span 5; }
+.c-6 { grid-column: span 6; }
+.c-7 { grid-column: span 7; }
+.c-8 { grid-column: span 8; }
+.c-9 { grid-column: span 9; }
+.c-10 { grid-column: span 10; }
+.c-12 { grid-column: span 12; }
+
+.from-2 { grid-column-start: 2; }
+.from-3 { grid-column-start: 3; }
+.from-5 { grid-column-start: 5; }
+.from-7 { grid-column-start: 7; }
+.from-8 { grid-column-start: 8; }
+
+.push-down {
+  margin-block-start: clamp(28px, 6vw, 96px);
+}
+
+.push-down-lg {
+  margin-block-start: clamp(60px, 12vw, 200px);
+}
+
+.stack > * + * {
+  margin-block-start: clamp(18px, 2.2vw, 30px);
+}
+
+.stack--tight > * + * {
+  margin-block-start: 12px;
+}
+
+.side-by-side {
+  display: flex;
+  flex-wrap: wrap;
+  gap: clamp(16px, 3vw, 40px);
+  align-items: baseline;
+}
+
+.split {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr));
+  gap: clamp(24px, 4vw, 64px);
+}
+
+.split--4 {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+/* Stat rows, meta tables and process lists all sit on hairlines. */
+.hairline-list > * {
+  border-top: 1px solid var(--line);
+  padding-block: clamp(18px, 2.4vw, 30px);
+}
+
+.hairline-list > *:last-child {
+  border-bottom: 1px solid var(--line);
+}
+
+.bleed {
+  margin-inline: calc(var(--gutter) * -1);
+}
+
+@media (max-width: 1020px) {
+  .grid {
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+  }
+
+  .c-3,
+  .c-4,
+  .c-5 {
+    grid-column: span 6;
+  }
+
+  .c-7,
+  .c-8,
+  .c-9,
+  .c-10 {
+    grid-column: span 6;
+  }
+
+  .from-2,
+  .from-3,
+  .from-5,
+  .from-7,
+  .from-8 {
+    grid-column-start: 1;
+  }
+
+  .split--4 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 620px) {
+  .grid,
+  .grid--loose {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    row-gap: 22px;
+  }
+
+  .c-6 {
+    grid-column: span 4;
+  }
+
+  .split--4 {
+    grid-template-columns: 1fr;
+  }
+
+  .push-down {
+    margin-block-start: 34px;
+  }
+
+  .push-down-lg {
+    margin-block-start: 52px;
+  }
+}
