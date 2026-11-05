@@ -293,10 +293,22 @@ host with its production database and persistent upload volume.
 
 ## Deployment
 
-See **[docs/DEPLOYMENT.md](docs/DEPLOYMENT.md)**. Short version: `npm run build`
-then `npm start` gives you one Node process that serves the API and the built
-SPA from a single origin — the only extra requirements are a managed PostgreSQL
-connection string and a persistent volume for `server/uploads/`.
+See **[docs/DEPLOYMENT.md](docs/DEPLOYMENT.md)**. Two supported shapes:
+
+**One Node process** — `npm run build` then `npm start` serves the API and the
+built SPA from a single origin. Requirements: a managed PostgreSQL connection
+string and a persistent volume for `server/uploads/`.
+
+**Vercel multi-service** — the root [`vercel.json`](vercel.json) declares a
+`client` service (the Vite SPA, catch-all path) and a `server` service (Express,
+`/api/*`, `/uploads/*`, `/sitemap.xml`, `/robots.txt`) on one shared origin, so
+relative URLs keep working and no CORS or service bindings are needed. Before
+the first build succeeds you must set `DATABASE_URL` (managed Postgres — the
+embedded dev database cannot deploy), `JWT_SECRET`, `PUBLIC_URL` and
+`CORS_ORIGIN` in the Vercel dashboard, then run `migrate:deploy` + `seed`
+against that database once. Admin-uploaded images are temporary on Vercel
+(`/tmp`, per instance) until storage is pointed at Vercel Blob or S3.
+Details and caveats: §11 of [docs/DEPLOYMENT.md](docs/DEPLOYMENT.md).
 
 ---
 

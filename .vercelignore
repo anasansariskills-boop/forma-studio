@@ -1,0 +1,8 @@
+# Local-only artefacts that must never be uploaded to a Vercel build.
+.vercel
+.pgdata
+node_modules
+client/dist
+server/uploads
+forma-studio-source.zip
+*.log

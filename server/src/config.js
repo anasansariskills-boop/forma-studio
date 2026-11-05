@@ -26,7 +26,11 @@ export const config = {
     .split(',')
     .map((origin) => origin.trim())
     .filter(Boolean),
-  uploadDir: resolve(root, process.env.UPLOAD_DIR ?? 'uploads'),
+  // On Vercel the deployment directory is read-only; /tmp is the only writable
+  // path. Uploaded images are therefore per-instance and temporary there —
+  // point UPLOAD_DIR at a mounted volume (or move storage to S3/Blob) for real
+  // persistence. Locally nothing changes.
+  uploadDir: resolve(root, process.env.UPLOAD_DIR ?? (process.env.VERCEL ? '/tmp/forma-uploads' : 'uploads')),
   maxUploadBytes: Number(process.env.MAX_UPLOAD_MB ?? 12) * 1024 * 1024,
   publicBaseUrl: (process.env.PUBLIC_URL ?? '').replace(/\/$/, ''),
   clientDist: resolve(root, '..', 'client', 'dist'),

@@ -309,3 +309,74 @@ systemctl restart forma-api          # or the host's restart button
 Take a `pg_dump` before any migration that adds or alters columns. Migrations in
 this repo are additive so far, but "additive so far" is exactly the assumption
 that costs someone their portfolio page.
+
+---
+
+## 11. Vercel (multi-service project)
+
+The repo ships a root [`vercel.json`](../vercel.json) that deploys this as **one
+Vercel project with two services** on a shared domain:
+
+| Service | Root | Framework | Public path |
+| --- | --- | --- | --- |
+| `client` | `client/` | Vite (auto-detected) | `/(.*)` — everything that is not below |
+| `server` | `server/` | Express | `/api/*`, `/uploads/*`, `/sitemap.xml`, `/robots.txt` |
+
+How the pieces line up with the code:
+
+- **Same origin, so no CORS or hostname changes.** The SPA calls `/api` with
+  relative URLs (`client/src/lib/api.js`) and every image URL in the database is
+  relative (`/img/...`, `/uploads/...`). The top-level rewrites keep that true on
+  Vercel, so **no service-to-service bindings are needed** — the browser talks to
+  the project domain, and the routing table decides which service answers.
+- **A service receives the original path.** `GET /api/projects` arrives at the
+  Express service as `/api/projects`, which is exactly how the routers are
+  mounted (`app.use('/api', …)`). Nothing to reconcile.
+- **Deep SPA links.** The `client` service carries its own scoped
+  `rewrite → /index.html`, so `/projects/house-of-light` and `/admin` resolve
+  after static files are checked.
+- **`entrypoint: "src/index.js"`** tells the Express service which file boots the
+  app; the build step only runs `prisma generate` (the engine must match the
+  Vercel build image, not your laptop).
+
+### What you must configure in the Vercel dashboard
+
+1. **A managed PostgreSQL database** (Vercel Postgres, Neon, Supabase…). The
+   embedded `embedded-postgres` server in `node_modules` cannot run on Vercel —
+   functions are not persistent processes and `.pgdata` is not a volume. Set:
+
+   ```
+   DATABASE_URL = postgresql://USER:PASSWORD@HOST/database?schema=public&sslmode=require
+   JWT_SECRET   = <≥32 chars, random>
+   PUBLIC_URL   = https://your-project.vercel.app   (or your custom domain)
+   CORS_ORIGIN  = https://your-project.vercel.app
+   ```
+
+   `CORS_ORIGIN` matters: browsers send an `Origin` header on same-origin
+   `POST`s, and the API rejects origins that are not on its allowlist.
+2. **Push the repo and import it as a Vercel project.** `vercel.json` is picked
+   up from the repo root; the npm-workspaces install is auto-detected from the
+   root lockfile.
+3. **Migrate and seed the managed database once**, from your machine:
+
+   ```bash
+   # temporarily put the managed DATABASE_URL in server/.env
+   npm run migrate:deploy --workspace server
+   npm run seed --workspace server
+   ```
+
+### The two honest limitations
+
+- **Uploaded images do not persist.** Vercel's deployment filesystem is
+  read-only, so `config.js` writes uploads to `/tmp/forma-uploads` when
+  `process.env.VERCEL` is set. `/tmp` is per-instance and wiped on redeploy or
+  scale-down. All 264 **seeded** images ship inside the client build and are
+  fine; anything an admin uploads through the dashboard is temporary until
+  `storeImage`/`removeImage` in `server/src/lib/storage.js` are pointed at Vercel
+  Blob or S3 (that swap is deliberately one file).
+- **In-memory rate limiters** reset per function instance. They still blunt
+  abuse; a Redis-backed store is the fix if you need strict limits.
+
+This configuration has been validated as JSON and against the services docs; it
+has **not yet been built on a live Vercel project** — run the §8 checklist
+against the first deployment URL before calling it live.
